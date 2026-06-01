@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'core/theme/app_theme.dart';
+import 'features/auth/presentation/pages/login_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const TaniPintarApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class TaniPintarApp extends StatelessWidget {
+  const TaniPintarApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: 'TaniPintar',
+      theme: AppTheme.lightTheme,
+      home: const LoginPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
